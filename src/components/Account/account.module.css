@@ -1,0 +1,63 @@
+.Container {
+  width: 17.5em;
+  min-height: 34em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 19px;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(15, 15, 15, 0.28);
+}
+
+.TopContainer {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 1.8em 5em;
+}
+
+.BackDrop {
+  width: 160%;
+  min-height: 34em;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -290px;
+  left: -70px;
+  transform: rotate(60deg);
+  border-radius: 50%;
+  background: rgb(90, 48, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(90, 48, 214, 1) 20%,
+    rgba(32, 98, 189, 1) 100%
+  );
+}
+
+.HeaderContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.HeaderText {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.24;
+  color: #fff;
+  margin: 0;
+  z-index: 10;
+}
+
+.SubheaderText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  z-index: 10;
+}
