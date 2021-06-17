@@ -21,6 +21,15 @@ const BackDropVariants = {
   },
 };
 
+const HeaderContainerVariants = {
+  hide: {
+    opacity: "0",
+  },
+  display: {
+    opacity: "1",
+  },
+};
+
 const expandingTransition = {
   type: "spring",
   duration: 2.3,
@@ -29,12 +38,15 @@ const expandingTransition = {
 
 function Account() {
   const [isExpanded, setExpanded] = useState(false);
+  const [isDisplayed, setDisplayed] = useState(false);
   const [isActive, setActive] = useState("signin");
 
   const playExpandingAnimation = () => {
     setExpanded(true);
+    setDisplayed(true);
     setTimeout(() => {
       setExpanded(false);
+      setDisplayed(false);
     }, expandingTransition.duration * 1000 - 1600);
   };
 
@@ -66,20 +78,30 @@ function Account() {
             transition={playExpandingAnimation}
           />
           {isActive === "signin" && (
-            <div className={style.HeaderContainer}>
+            <motion.div
+              className={style.HeaderContainer}
+              initial={false}
+              variants={HeaderContainerVariants}
+              animate={isDisplayed ? "hide" : "display"}
+            >
               <h2 className={style.HeaderText}>Welcome Back</h2>
               <h3 className={style.SubheaderText}>
                 Please sign in to continue!
               </h3>
-            </div>
+            </motion.div>
           )}
           {isActive === "signup" && (
-            <div className={style.HeaderContainer}>
+            <motion.div
+              className={style.HeaderContainer}
+              initial={false}
+              variants={HeaderContainerVariants}
+              animate={isDisplayed ? "hide" : "display"}
+            >
               <h2 className={style.HeaderText}>Create account</h2>
               <h3 className={style.SubheaderText}>
                 Please sign up to continue!
               </h3>
-            </div>
+            </motion.div>
           )}
         </div>
         <div className={style.InnerContainer}>
