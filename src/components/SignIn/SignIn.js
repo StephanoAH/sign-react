@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./SignIn.module.css";
+import { AccountContext } from "../Account/AccountContext";
 
-function SignIn() {
+function Signin() {
+  const { switchToSignup } = useContext(AccountContext);
   return (
     <div className={styles.Container}>
       <form className={styles.FormContainer}>
@@ -17,8 +19,8 @@ function SignIn() {
         Forget your password?
       </a>
       <p className={styles.OffLink}>
-        Don't have an accoun?
-        <a className={styles.HighlightLink} href="#">
+        Don't have an account?
+        <a className={styles.HighlightLink} onClick={switchToSignup}>
           Sign up
         </a>
       </p>
@@ -26,4 +28,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default Signin;

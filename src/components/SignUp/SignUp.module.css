@@ -1,0 +1,72 @@
+.Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.FormContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Input {
+  min-height: 2.7em;
+  padding: 0 0.8em;
+  margin: 0.2em 0.8em;
+  border: 1px solid rgba(154, 154, 154, 0.6);
+  border-radius: 0.7em;
+  outline: none;
+  font-size: 1rem;
+  transition: all 200ms ease-in-out;
+}
+
+.Input::placeholder {
+  color: rgba(154, 154, 154, 1);
+}
+
+.Input:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(90, 48, 214);
+}
+
+.SubmitBtn {
+  width: 8em;
+  padding: 0.8em;
+  margin: 1em auto;
+  border: none;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 240ms ease-in-out;
+  background: rgb(90, 48, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(90, 48, 214, 1) 20%,
+    rgba(32, 98, 189, 1) 100%
+  );
+}
+
+.SubmitBtn:hover {
+  filter: brightness(1.03);
+}
+
+.OffLink {
+  margin: 0.8em 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #585858;
+}
+
+.HighlightLink {
+  margin: 0 0.2em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(90, 48, 214);
+}

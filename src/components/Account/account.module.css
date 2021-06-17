@@ -21,7 +21,7 @@
 
 .BackDrop {
   width: 160%;
-  min-height: 34em;
+  min-height: 30em;
   display: flex;
   flex-direction: column;
   position: absolute;

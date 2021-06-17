@@ -17,7 +17,6 @@
   margin: 0.4em 0.8em;
   border: 1px solid rgba(154, 154, 154, 0.6);
   border-radius: 0.7em;
-  /* border-bottom: 1.4px solid rgba(200, 200, 200, 0.4); */
   outline: none;
   font-size: 1rem;
   transition: all 200ms ease-in-out;
@@ -26,10 +25,6 @@
 .Input::placeholder {
   color: rgba(154, 154, 154, 1);
 }
-
-/* .Input:not(:last-of-type) {
-  border-bottom: 1.5px solid rgba(200, 200, 200, 0.4);
-} */
 
 .Input:focus {
   outline: none;
